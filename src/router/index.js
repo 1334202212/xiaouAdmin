@@ -1,0 +1,69 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+      {
+       path:'/',
+       redirect:'/menu',    
+      },
+      {
+        path:'/login',
+        component:()=>import('../pages/Login/Login.vue')
+      },
+      {
+        path:'/home',
+        component:()=>import('../pages/Home/home.vue')
+      },
+      {
+        path:'/menu',
+        component:()=>import('../pages/Menu/Menu.vue')
+      },
+      {
+        path:'/menuadd',
+        component:()=>import('../pages/Menu/Menuadd.vue')
+      },
+      {
+        path:'/menuedit',
+        component:()=>import('../pages/Menu/Menuadd.vue')
+      },
+      {
+        path:'/role',
+        component:()=>import('../pages/Role/Role.vue')
+      },
+      {
+        path:'/role/add',
+        component:()=>import('../pages/Role/Roleadd.vue')
+      },
+      {
+        path:'/role/edit',
+        component:()=>import('../pages/Role/Roleadd.vue')
+      },
+      {
+        path:'/user',
+        component:()=>import('../pages/User/User.vue')
+      },
+      {
+        path:'/useradd',
+        component:()=>import('../pages/User/Useradd.vue')
+      },
+      {
+        path:'/useredit',
+        component:()=>import('../pages/User/Useradd.vue')
+      },
+      {
+        path:'/cate',
+        component:()=>import('../pages/Cate/Cate.vue')
+      },
+      {
+        path:'/cate/add',
+        component:()=>import('../pages/Cate/Cateadd.vue')
+      },
+      {
+        path:'/cate/edit',
+        component:()=>import('../pages/Cate/Cateadd.vue')
+      }
+  ]
+})
